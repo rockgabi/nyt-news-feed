@@ -34,7 +34,7 @@ class FetchArticles extends Command
     {
         $this->client = new Client([
             // Base URI is used with relative requests
-            'base_uri' => 'https://api.nytimes.com?api-key=YlUAhF41RhaZa6NWe44nDwoXs7fXUc1p',
+            'base_uri' => config()->get('app.nyt_api_base'),
             // You can set any number of default request options.
             'timeout'  => 20.0,
         ]);

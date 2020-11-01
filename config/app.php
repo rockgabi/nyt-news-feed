@@ -132,6 +132,7 @@ return [
     |
     */
 
+    'nyt_api_base' => env('NTY_API_BASE'),
     'nyt_api_key' => env('NTY_API_KEY'),
 
     /*
