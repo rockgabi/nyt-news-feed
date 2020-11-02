@@ -71,6 +71,7 @@ class FetchArticles extends Command
         }
 
         if (sizeof($res) > 0) {
+            Cache::forget('nyt-feed');
             Cache::put('nyt-feed', json_encode($res), 6000);
         }
 
