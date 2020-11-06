@@ -5,7 +5,9 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Cache;
-use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
+use Sentry\Severity;
+use Sentry;
 
 class FetchArticles extends Command
 {
@@ -69,6 +71,13 @@ class FetchArticles extends Command
             }
             $offset += $perPage;
         }
+
+        Log::info('fetch-articles data', [
+            'extra' => [
+                'results_length' => sizeof($res),
+                'offset' => $offset,
+            ],
+        ]);
 
         if (sizeof($res) > 0) {
             Cache::forget('nyt-feed');
