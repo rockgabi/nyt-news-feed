@@ -72,16 +72,19 @@ class FetchArticles extends Command
             $offset += $perPage;
         }
 
-        Log::info('fetch-articles data', [
-            'extra' => [
-                'results_length' => sizeof($res),
-                'offset' => $offset,
-            ],
-        ]);
 
         if (sizeof($res) > 0) {
             Cache::forget('nyt-feed');
             Cache::put('nyt-feed', json_encode($res), 6000);
+        }
+
+        if (sizeof($res) < 100) {
+            Log::info('fetch-articles data results are less than 100', [
+                'extra' => [
+                    'results_length' => sizeof($res),
+                    'offset' => $offset,
+                ],
+            ]);
         }
 
     }
