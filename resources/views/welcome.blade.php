@@ -9,6 +9,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
 
+    <link data-rh="true" rel="shortcut icon" href="/favicon.ico"/>
+
     <!-- Styles -->
     <style>
         html,
@@ -1137,24 +1139,7 @@
                             </li>
                         @endforeach
                     </ol>
-                    <div class="css-1t62hi8">
-                        <div class="css-1stvaey">
-                            <div>
-                                <div
-                                    style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;white-space:nowrap;padding:0;width:1px;position:absolute"
-                                    role="log" aria-live="assertive"></div>
-                                <div
-                                    style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;white-space:nowrap;padding:0;width:1px;position:absolute"
-                                    role="log" aria-live="assertive"></div>
-                                <div
-                                    style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;white-space:nowrap;padding:0;width:1px;position:absolute"
-                                    role="log" aria-live="polite"></div>
-                                <div
-                                    style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;white-space:nowrap;padding:0;width:1px;position:absolute"
-                                    role="log" aria-live="polite"></div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
