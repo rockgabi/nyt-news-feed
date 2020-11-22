@@ -415,7 +415,7 @@
 
         .css-ui9rw0 {
             background: #fff;
-            border-bottom: 1px solid #e2e2e2;
+            /*border-bottom: 1px solid #e2e2e2;*/
             height: 36px;
             padding: 8px 15px 3px;
             position: relative;
@@ -461,6 +461,44 @@
             }
         }
 
+        .css-7uzm1n {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            right: 10px;
+            top: 9px;
+        }
+
+        .css-1kj7lfb {
+            display: inline-block;
+            margin-right: 7px;
+        }
+
+        .css-13xu0ly {
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: nyt-franklin, helvetica, arial, sans-serif;
+            transition: all 0.6s ease 0s;
+            white-space: nowrap;
+            vertical-align: middle;
+            background-color: rgb(86, 123, 149);
+            border: 1px solid rgb(50, 104, 145);
+            color: rgb(255, 255, 255);
+            font-size: 11px;
+            line-height: 11px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            padding: 11px 12px 8px;
+            text-transform: uppercase;
+        }
+
+        @media (min-width: 1024px) {
+            .css-13xu0ly {
+                padding: 11px 12px 8px;
+            }
+        }
+
+
 
         /* Timeswire */
         #site-content {
@@ -478,6 +516,7 @@
         }
 
         .css-1j8bfih {
+            position: relative;
             max-width: 1200px;
             padding: 40px 0 7px;
             border-bottom: 2px solid #121212;
@@ -1009,7 +1048,7 @@
         .css-13o0c9t {
             list-style: none;
             line-height: 8px;
-            margin: 0 0 35px;
+            margin: 0 0 20px;
             padding: 0;
         }
 
@@ -1029,16 +1068,20 @@
             padding: 0 10px;
         }
 
+        .nyt-logo-attribution {
+            margin: 0 0 35px;
+        }
+
 
 
 
     </style>
 </head>
 <body>
-    <div class="NYTAppHideMasthead css-1r6wvpq e1suatyy0">
+    {{--<div class="NYTAppHideMasthead css-1r6wvpq e1suatyy0">
         <header class="css-1bymuyk e1suatyy1">
             <section class="css-ui9rw0 e1suatyy2">
-               {{-- <div class="css-eph4ug er09x8g0">
+                <div class="css-eph4ug er09x8g0">
                     <div class="css-6n7j50">
                         <button aria-haspopup="true" aria-expanded="false" aria-label="Sections Navigation &amp; Search"
                                 class="er09x8g1 css-1uqx5yl" data-testid="nav-button" type="button">
@@ -1068,7 +1111,7 @@
                         </button>
                     </div>
                     <a class="css-1f8er69" href="#site-content">Skip to content</a><a class="css-1f8er69" href="#site-index">Skip to site index</a>
-                </div>--}}
+                </div>
 
                 <div class="css-10698na e1huz5gh0">
                     <a data-testid="masthead-mobile-logo" aria-label="New York Times Logo. Click to visit the homepage" class="css-t66y1h e1huz5gh1" href="/">
@@ -1078,11 +1121,24 @@
                     </a>
                 </div>
 
-                {{--<div class="css-7uzm1n ez4a0qj1"><a
-                        href="https://myaccount.nytimes.com/auth/login?response_type=cookie&amp;client_id=vi&amp;redirect_uri=https%3A%2F%2Fwww.nytimes.com%2Fsubscription%2Fmultiproduct%2Flp8KQUS.html%3FcampaignId%3D7JFJX%26EXIT_URI%3Dhttps%253A%252F%252Fwww.nytimes.com%252Ftimeswire&amp;asset=masthead"
-                        class="css-1kj7lfb">
-                        <button data-testid="login-button" class="css-13xu0ly ez4a0qj0">Log in</button>
-                    </a>
+
+
+            </section>
+        </header>
+    </div>--}}
+
+    <main id="site-content">
+        <div class="css-1v9sdfx">
+            <div class="css-1wa7u5r">
+
+                <header class="css-1j8bfih">
+                    <h1 class="css-kicrxn">NYTNotifier</h1>
+                    <div class="css-1op6wzy">Get notified every time the New York Times publishes a story.</div>
+
+                    <div class="css-7uzm1n ez4a0qj1">
+                        <a href="{{ url('/') }}" class="css-1kj7lfb">
+                            <button data-testid="login-button" class="css-13xu0ly ez4a0qj0">Refresh</button>
+                        </a>{{--
                     <div class="css-6n7j50">
                         <button aria-haspopup="true" aria-expanded="false" aria-label="Account" class="ez4a0qj4 css-1o2c7rh"
                                 data-testid="user-settings-button" type="button">
@@ -1091,20 +1147,8 @@
                                 <circle cx="8" cy="4" r="4"></circle>
                             </svg>
                         </button>
+                    </div>--}}
                     </div>
-                </div>--}}
-
-            </section>
-        </header>
-    </div>
-
-    <main id="site-content">
-        <div class="css-1v9sdfx">
-            <div class="css-1wa7u5r">
-
-                <header class="css-1j8bfih">
-                    <h1 class="css-kicrxn">NYT News Feed</h1>
-                    <div class="css-1op6wzy">NYT News Feed (this page) is a clone of the NYT TimesWire page -- a display of the latest 200 articles published on NYTimes.com</div>
                 </header>
 
                 <div class="css-jj1ltg">
@@ -1748,6 +1792,8 @@
                     <a data-testid="footer-link" class="css-jq1cx6" href="https://www.nytimes.com/subscription?campaignId=37WXW">Subscriptions</a>
                 </li>
             </ul>
+
+            <a href="https://developer.nytimes.com/"><img src="{{ asset('poweredby_nytimes_200c.png') }}" alt="Powered by nytimes" class="nyt-logo-attribution"></a>
         </nav>
     </footer>
 </body>
